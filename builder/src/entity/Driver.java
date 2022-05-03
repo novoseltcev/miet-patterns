@@ -1,23 +1,14 @@
 package entity;
 
-import java.util.List;
-
 public class Driver {
-    static int counter = 0;
-    int id;
-    List<DriverLicense> driverLicenses;
+    public final DriverLicense driverLicense;
 
-    public Driver(List<DriverLicense> licenses) {
-        this.id = counter++;
-        this.driverLicenses = licenses;
-    }
-
-    public List<DriverLicense> getLicenses() {
-        return driverLicenses;
+    public Driver(DriverLicense license) {
+        this.driverLicense = license;
     }
 
     @Override
-    public Driver clone() {
-        return new Driver(this.driverLicenses);
+    public String toString() {
+        return "Driver{" + "driverLicense=" + driverLicense + '}';
     }
 }

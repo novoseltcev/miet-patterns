@@ -8,10 +8,6 @@ public class Passenger {
         this.type = type;
     }
 
-    public PassengerStatus getStatus() {
-        return status;
-    }
-
     public void setStatus(PassengerStatus status) {
         this.status = status;
     }
