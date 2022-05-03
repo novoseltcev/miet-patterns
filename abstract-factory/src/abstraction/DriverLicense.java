@@ -1,4 +1,4 @@
-package driver;
+package abstraction;
 
 public enum DriverLicense {
     A, A1, M,
