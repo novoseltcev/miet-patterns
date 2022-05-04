@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface ICorrector {
+public interface ICorrector {
+    String execute(String context);
 }
