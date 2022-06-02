@@ -1,3 +1,4 @@
+import builder.BoatBuilder;
 import builder.BusBuilder;
 import builder.Director;
 import builder.TaxiBuilder;
@@ -9,6 +10,7 @@ public class BuilderClient {
     public static void main(String[] args) {
         var nBus = 5;
         var nTaxi = 8;
+        var nBoat = 2;
 
         var schedule = new LinkedList<Board>();
 
@@ -21,6 +23,11 @@ public class BuilderClient {
         var taxiBuilder = new TaxiBuilder();
         for (var i = 0; i < nTaxi; i++) {
             schedule.add(director.createBoard(taxiBuilder));
+        }
+
+        var boatBuilder = new BoatBuilder();
+        for (var i = 0; i < nBoat; i++) {
+            schedule.add(director.createBoard(boatBuilder));
         }
 
         var i = 0;

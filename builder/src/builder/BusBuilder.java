@@ -1,11 +1,13 @@
 package builder;
 
-import entity.Driver;
-import entity.DriverLicense;
-import entity.Passenger;
-import entity.PassengerType;
+import entity.*;
 
 public class BusBuilder extends Builder {
+    @Override
+    void setTypeName() {
+        board.name = "Bus";
+    }
+
     @Override
     void createDriver() {
         board.driver = new Driver(DriverLicense.D);
@@ -17,6 +19,13 @@ public class BusBuilder extends Builder {
             board.passengers.add(new Passenger(PassengerType.common));
             board.passengers.add(new Passenger(PassengerType.child));
             board.passengers.add(new Passenger(PassengerType.beneficiary));
+        }
+    }
+
+    @Override
+    void createSafetyObjects() {
+        for (var i = 0; i < 30; i++) {
+            board.safetyObjects.add(new SafetyObject(SafetyObjectType.seatBelt));
         }
     }
 }

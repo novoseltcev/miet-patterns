@@ -5,5 +5,5 @@ public enum DriverLicense {
     B, B1, BE,
     C, CE, C1, C1E,
     D, DE, D1, D1E,
-    Tm, Tb
+    Tm, Tb, W, P, H
 }

@@ -5,18 +5,16 @@ import java.util.List;
 
 
 public class Board {
+    public String name;
     public Driver driver;
-    public final List<Passenger> passengers;
-
-    public Board() {
-        this.passengers = new LinkedList<>();
-    }
+    public final List<Passenger> passengers = new LinkedList<>();
+    public List<SafetyObject> safetyObjects = new LinkedList<>();
 
     @Override
     public String toString() {
-        return "Board{" +
-                ", driver=" + driver +
+        return name + " {driver=" + driver +
                 ", passengers=" + passengers.size() +
+                ", safetyObjects=" + safetyObjects.size() +
                 '}';
     }
 
